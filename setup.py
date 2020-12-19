@@ -15,7 +15,7 @@ setuptools.setup(
     version=VERSION,
     author="semuadmin",
     author_email="semuadmin@semuconsulting.com",
-    description="UBX Protocol Parser",
+    description="workflow testing repo",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/semuconsulting/sandpit",
