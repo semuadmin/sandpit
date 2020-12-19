@@ -7,6 +7,7 @@ sandpit
 
 ![Release](https://img.shields.io/github/v/release/semuadmin/sandpit?include_prereleases)
 ![Build](https://img.shields.io/github/workflow/status/semuadmin/sandpit/sandpit)
+![Coverage](https://img.shields.io/codecov/c/github/semuadmin/sandpit>)
 ![Release Date](https://img.shields.io/github/release-date-pre/semuadmin/sandpit)
 ![Last Commit](https://img.shields.io/github/last-commit/semuadmin/sandpit)
 ![Contributors](https://img.shields.io/github/contributors/semuadmin/sandpit.svg)
