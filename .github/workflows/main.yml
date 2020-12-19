@@ -30,6 +30,6 @@ jobs:
       run: |
         python tests/testsuite.py
     - name: Test coverage
-      run |
+      run: |
         python -m coverage run --source=sandpit -m pytest
         python -m coverage report
