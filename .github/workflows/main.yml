@@ -33,3 +33,7 @@ jobs:
       run: |
         python -m coverage run --source=sandpit -m pytest
         python -m coverage report
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
