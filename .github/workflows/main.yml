@@ -32,7 +32,7 @@ jobs:
  #       python -m coverage report
     - name: Generate coverage report
       run: |
-        pytest --source=sandpit --cov=./ --cov-report=xml
+        pytest --cov=sandpit --cov-report=xml
     - name: "Upload coverage to Codecov"
       uses: codecov/codecov-action@v1
       with:
