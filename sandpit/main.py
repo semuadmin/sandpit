@@ -11,6 +11,7 @@ from random import choice
 TWATS = [
     "Bailey",
     "Buckland",
+    "Cameron",
     "Gove",
     "Hancock",
     "Johnson",
