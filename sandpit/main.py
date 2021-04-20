@@ -25,7 +25,7 @@ TWATS = [
 ]
 
 
-class Classof2020:
+class ToryScum:
     """
     classdocs
     """
