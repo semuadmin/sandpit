@@ -11,6 +11,7 @@ from random import choice
 TWATS = [
     "Bailey",
     "Buckland",
+    "Cameron",
     "Drax",
     "Gove",
     "Hancock",
@@ -18,6 +19,7 @@ TWATS = [
     "Raab",
     "Rees-Mogg",
     "Patel",
+    "Thatcher",
     "Wallace",
     "Williamson",
 ]
