@@ -1,0 +1,16 @@
+.DS_Store
+.dropbox
+.coverage
+*.code-workspace
+.vscode
+/htmlcov
+/build
+/dist
+/docs
+/references
+/src/sandpit.egg*
+/src/sandpit/__pycache__
+/.dbeaver
+*.pyc
+/.pytest_cache/
+/tests/__pycache__
