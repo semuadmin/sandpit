@@ -1,9 +1,5 @@
 # sandpit Release Notes
 
-### RELEASE 0.0.4
+### RELEASE 0.0.4-alpha
 
-1. Rotten to the core.
-
-### RELEASE 0.0.3
-
-1. None of the talents.
+1. Initial release for pyproject.toml
