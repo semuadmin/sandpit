@@ -6,7 +6,15 @@ Created on 19 Dec 2020
 @author: semuadmin
 """
 
-from math import sin, cos, acos, atan2, pi, radians
+from math import (
+    sin,
+    cos,
+    acos,
+    atan2,
+    pi,
+    radians,
+    degrees,
+)  # deliberate pylint warning
 
 WGS84 = "WGS_84"
 WGS84_SMAJ_AXIS = 6378137.0  # semi-major axis

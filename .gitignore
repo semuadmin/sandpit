@@ -6,7 +6,7 @@
 /htmlcov
 /build
 /dist
-/docs
+/docs/_build
 /references
 /src/sandpit.egg*
 /src/sandpit/__pycache__
