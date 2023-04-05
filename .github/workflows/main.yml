@@ -25,7 +25,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with pylint
       run: |
-        pylint -E -ry sandpit
+          pylint -E src/sandpit
  #   - name: Test coverage
  #     run: |
  #       python -m coverage run --source=sandpit -m pytest
