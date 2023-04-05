@@ -26,10 +26,6 @@ jobs:
     - name: Lint with pylint
       run: |
           pylint -E src/sandpit
- #   - name: Test coverage
- #     run: |
- #       python -m coverage run --source=sandpit -m pytest
- #       python -m coverage report
     - name: Generate coverage report
       run: |
         pytest --cov=sandpit --cov-report=xml
