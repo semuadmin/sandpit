@@ -45,20 +45,45 @@ repository = "https://github.com/semuadmin/sandpit"
 changelog = "https://github.com/semuadmin/sandpit/blob/master/RELEASE_NOTES.md"
 
 [project.optional-dependencies]
+# deploy = [
+#     "build >= 0.1",
+#     "pip >= 23.0",
+#     "setuptools >= 66.0",
+#     "wheel >= 0.40"
+# ]
+# test = [
+#     "bandit >= 1.7",
+#     "black >= 23.1",
+#     "pylint >= 2.17",
+#     "pytest >= 7.2",
+#     "pytest-cov >= 4.0",
+#     "Sphinx >= 5.3",
+#     "sphinx-rtd-theme >= 1.2",
+# ]
+proxy = [
+    "PySocks>=1.7",
+]
 deploy = [
-    "build >= 0.1",
+    "build >= 0.10",
     "pip >= 23.0",
-    "setuptools >= 66.0",
-    "wheel >= 0.40"
+    "setuptools >= 64.0",
+    "wheel >= 0.40",
 ]
 test = [
-    "bandit >= 1.7",
-    "black >= 23.1",
-    "pylint >= 2.17",
-    "pytest >= 7.2",
-    "pytest-cov >= 4.0",
-    "Sphinx >= 5.3",
-    "sphinx-rtd-theme >= 1.2",
+    'bandit >= 1.7',
+    'black >= 23.0',
+    'codespell >= 2.2',
+    'flake >= 6.0',
+    'isort >= 5.12',
+    'mock >= 5.0',
+    'mypy >= 1.2',
+    'ptr >= 22.0',
+    'pylama >= 8.4',
+    'pytest >= 7.0',
+    'pytest-runner >= 6.0',
+    'safety >= 2.3',
+    'six >= 1.16',
+    'tox >= 4.4',
 ]
 
 [tool.bandit]
