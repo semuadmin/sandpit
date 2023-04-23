@@ -13,8 +13,7 @@ from math import (
     atan2,
     pi,
     radians,
-    degrees,
-)  # deliberate pylint warning
+)
 
 WGS84 = "WGS_84"
 WGS84_SMAJ_AXIS = 6378137.0  # semi-major axis

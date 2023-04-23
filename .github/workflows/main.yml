@@ -26,6 +26,9 @@ jobs:
     - name: Lint with pylint
       run: |
           pylint -E src/sandpit
+    - name: Scan security vulnerabilities with bandit
+      run: |
+        bandit -c pyproject.toml -r .
     - name: Generate coverage report
       run: |
         pytest --cov=sandpit --cov-report=xml

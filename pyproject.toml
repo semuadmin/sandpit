@@ -57,6 +57,10 @@ test = [
     "sphinx-rtd-theme >= 1.2.0",
 ]
 
+[tool.bandit]
+exclude_dirs = ["tests", "examples"]
+skips = []
+
 [tool.pylint]
 jobs = 0
 reports = "y"
@@ -65,6 +69,7 @@ py-version = "3.7"
 fail-under = "9.8"
 fail-on = "E,F"
 clear-cache-post-run = "y"
+good-names="i,j,x,y"
 disable = """
     raw-checker-failed,
     bad-inline-option,
