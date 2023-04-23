@@ -70,20 +70,20 @@ deploy = [
     "wheel >= 0.40",
 ]
 test = [
-    'bandit >= 1.7',
-    'black >= 23.0',
-    'codespell >= 2.2',
+    'bandit',
+    'black',
+    'codespell',
     'flake8',
-    'isort >= 5.12',
-    'mock >= 5.0',
-    'mypy >= 1.2',
-    'ptr >= 22.0',
-    'pylama >= 8.4',
-    'pytest >= 7.0',
-    'pytest-runner >= 6.0',
-    'safety >= 2.3',
-    'six >= 1.16',
-    'tox >= 4.4',
+    'isort',
+    'mock',
+    'mypy',
+    'ptr',
+    'pylama',
+    'pytest',
+    'pytest-runner',
+    'safety',
+    'six',
+    'tox',
 ]
 
 [tool.bandit]
