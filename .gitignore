@@ -2,7 +2,6 @@
 .dropbox
 .coverage
 *.code-workspace
-.vscode
 /htmlcov
 /build
 /dist
