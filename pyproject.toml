@@ -45,7 +45,7 @@ repository = "https://github.com/semuadmin/sandpit"
 changelog = "https://github.com/semuadmin/sandpit/blob/master/RELEASE_NOTES.md"
 
 [project.optional-dependencies]
-build = [
+deploy = [
     "build >= 0.1",
     "pip >= 23.0",
     "setuptools >= 66.0",
