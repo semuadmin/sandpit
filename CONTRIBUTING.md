@@ -8,6 +8,7 @@ sandpit is an internal development and testing repo not intended for public cons
   * We use Visual Studio Code for development and testing, but you are at liberty to use your preferred IDE.
   * We document the code in accordance with [Sphinx](https://www.sphinx-doc.org/en/master/) docstring conventions.
   * We use [pylint](https://pypi.org/project/pylint/) (>=2.6.0) for code analysis.
+  * We use [bandit](https://pypi.org/project/bandit/) (>=1.7) for security vulnerability analysis.
   * We use [black](https://pypi.org/project/black/) (>= 20.8) for code formatting and ask that you do the same.
 
 ## Testing
