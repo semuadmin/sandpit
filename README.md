@@ -3,7 +3,8 @@ sandpit
 
 ** NOTHING TO SEE HERE - MOVE ALONG **
 
-Testing sandpit for GitHub development workflows, build toolchains and other shiz.
+Testing sandpit for VS Code and GitHub Actions Continous Integration workflows,
+build toolchains and other shiz.
 
 ### Current Status
 
