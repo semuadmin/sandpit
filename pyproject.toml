@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=66.0.0", "wheel"]         # >=64 for PEP660 support
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "sandpit"
+authors = [{ name = "semuadmin", email = "semuadmin@semuconsulting.com" }]
+maintainers = [{ name = "semuadmin", email = "semuadmin@semuconsulting.com" }]
+description = "Sandpit development, test and build environment"
+version = "0.0.4"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: MacOS X",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: X11 Applications",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/semuadmin/sandpit"
+documentation = "https://github.com/semuadmin/sandpit"
+repository = "https://github.com/semuadmin/sandpit"
+changelog = "https://github.com/semuadmin/sandpit/blob/master/RELEASE_NOTES.md"
+
+[project.optional-dependencies]
+deploy = ["build", "pip", "setuptools >= 66.0", "wheel"]
+test = [
+    "bandit",
+    "black",
+    "isort",
+    "pylint",
+    "pytest",
+    "pytest-cov",
+    "Sphinx",
+    "sphinx-rtd-theme",
+]
+
+[tool.black]
+target-version = ['py38']
+
+[tool.isort]
+py_version = 38
+profile = "black"
+
+[tool.bandit]
+exclude_dirs = ["docs", "examples", "tests"]
+skips = []
+
+[tool.pylint]
+jobs = 0
+reports = "y"
+recursive = "y"
+py-version = "3.8"
+fail-under = "9.8"
+fail-on = "E,F"
+clear-cache-post-run = "y"
+good-names = "i,j,x,y"
+disable = """
+    raw-checker-failed,
+    bad-inline-option,
+    locally-disabled,
+    file-ignored,
+    suppressed-message,
+    useless-suppression,
+    deprecated-pragma,
+    use-symbolic-message-instead,
+"""
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov --cov-report html --cov-fail-under 95"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
