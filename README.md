@@ -10,7 +10,7 @@ build toolchains and other shiz.
 
 ## <a name="currentstatus">Current Status</a>
 
-![Release](https://img.shields.io/github/v/release/semuadmin/sandpit?include_prereleases)
+![Release](https://img.shields.io/github/v/release/semuadmin/sandpit)
 ![Build](https://img.shields.io/github/actions/workflow/status/semuadmin/sandpit/main.yml)
 ![Codecov](https://img.shields.io/codecov/c/github/semuadmin/sandpit)
 ![Release Date](https://img.shields.io/github/release-date-pre/semuadmin/sandpit)
