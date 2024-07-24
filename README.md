@@ -5,7 +5,7 @@ sandpit
 
 ** NOTHING TO SEE HERE - MOVE ALONG **
 
-Testing sandpit for VS Code and GitHub Actions Continous Integration workflows,
+Testing sandpit for VS Code and GitHub Actions Continuous Integration workflows,
 build toolchains and other shiz.
 
 ## <a name="currentstatus">Current Status</a>
