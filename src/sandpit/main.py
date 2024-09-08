@@ -7,7 +7,7 @@ Created on 19 Dec 2020
 """
 
 from math import acos, atan2, cos, pi, radians, sin
-from os import getenv
+from pylint import __version__ as pylintversion
 
 WGS84 = "WGS_84"
 WGS84_SMAJ_AXIS = 6378137.0  # semi-major axis
@@ -52,7 +52,7 @@ def bearing(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     :rtype: float
     """
 
-    print(f"This is a dodgy f-string {getenv("PATH", "test")}")
+    print(f"{pylintversion=}")
     coordinates = lat1, lon1, lat2, lon2
     phi1, lambda1, phi2, lambda2 = [radians(c) for c in coordinates]
     y = sin(lambda2 - lambda1) * cos(phi2)
