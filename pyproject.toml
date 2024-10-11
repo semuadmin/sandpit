@@ -21,7 +21,6 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -53,10 +52,10 @@ test = [
 ]
 
 [tool.black]
-target-version = ['py38']
+target-version = ['py39']
 
 [tool.isort]
-py_version = 38
+py_version = 39
 profile = "black"
 
 [tool.bandit]
@@ -67,7 +66,7 @@ skips = []
 jobs = 0
 reports = "y"
 recursive = "y"
-py-version = "3.8"
+py-version = "3.9"
 fail-under = "9.8"
 fail-on = "E,F"
 clear-cache-post-run = "y"
