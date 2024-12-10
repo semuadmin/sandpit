@@ -3,7 +3,7 @@ sandpit
 
 [Current Status](#currentstatus) | [Author & License](#author)
 
-** NOTHING TO SEE HERE - MOVE ALONG **
+*** NOTHING TO SEE HERE - MOVE ALONG ***
 
 Testing sandpit for VS Code and GitHub Actions Continuous Integration workflows,
 build toolchains and other shiz.
