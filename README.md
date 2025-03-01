@@ -23,4 +23,4 @@ build toolchains and other shiz.
 
 ![GitHub License](https://img.shields.io/github/license/semuadmin/sandpit)
 
-![Freedom](https://github.com/semuadmin/sandpit/blob/main/src/sandpit/resources/ukraine400.jpg?raw=true)
+![Freedom for Ukraine](https://github.com/semuadmin/sandpit/blob/main/src/sandpit/resources/ukraine200.jpg?raw=true)
