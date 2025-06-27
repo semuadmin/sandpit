@@ -9,13 +9,13 @@ sandpit.main module
 
 .. automodule:: sandpit.main
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: sandpit
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

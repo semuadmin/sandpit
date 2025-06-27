@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=66.0.0", "wheel"]         # >=64 for PEP660 support
+requires = ["setuptools>=75.0.0", "wheel"]         # >=64 for PEP660 support
 build-backend = "setuptools.build_meta:__legacy__"
 
 [project]
@@ -10,7 +10,7 @@ maintainers = [{ name = "semuadmin", email = "semuadmin@semuconsulting.com" }]
 description = "Sandpit development, test and build environment"
 license = { file = "LICENSE" }
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 classifiers = [
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
@@ -39,7 +39,7 @@ repository = "https://github.com/semuadmin/sandpit"
 changelog = "https://github.com/semuadmin/sandpit/blob/master/RELEASE_NOTES.md"
 
 [project.optional-dependencies]
-deploy = ["build", "pip", "setuptools >= 66.0", "wheel"]
+deploy = ["build", "pip", "setuptools >= 75.0", "wheel"]
 test = [
     "bandit",
     "black",
