@@ -8,11 +8,10 @@ dynamic = ["version"]
 authors = [{ name = "semuadmin", email = "semuadmin@semuconsulting.com" }]
 maintainers = [{ name = "semuadmin", email = "semuadmin@semuconsulting.com" }]
 description = "Sandpit development, test and build environment"
-license = { file = "LICENSE" }
+license = "BSD-3-Clause"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Development Status :: 5 - Production/Stable",
     "Environment :: MacOS X",
@@ -50,10 +49,9 @@ build = [
 test = [
     "bandit",
     "black",
+    "coverage",
     "isort",
     "pylint",
-    "pytest",
-    "pytest-cov",
     "Sphinx",
     "sphinx-rtd-theme",
 ]
@@ -70,7 +68,7 @@ py_version = 39
 profile = "black"
 
 [tool.bandit]
-exclude_dirs = ["docs", "examples", "tests"]
+exclude_dirs = ["docs", "examples", "tests", ".venv"]
 skips = []
 
 [tool.pylint]
@@ -93,11 +91,14 @@ disable = """
     use-symbolic-message-instead,
 """
 
-[tool.pytest.ini_options]
-minversion = "7.0"
-addopts = "--cov --cov-report html --cov-fail-under 95"
-pythonpath = ["src"]
-testpaths = ["tests"]
-
 [tool.coverage.run]
 source = ["src"]
+
+[tool.coverage.paths]
+source = ["src/"]
+
+[tool.coverage.report]
+fail_under = 95
+
+[tool.coverage.html]
+directory = "htmlcov"

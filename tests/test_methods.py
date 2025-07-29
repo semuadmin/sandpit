@@ -6,7 +6,7 @@ Created on 19 Dec 2020
 
 import unittest
 
-from sandpit.main import bearing, haversine
+from src.sandpit.main import bearing, haversine
 
 
 class StaticTest(unittest.TestCase):
