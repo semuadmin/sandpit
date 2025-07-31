@@ -50,12 +50,12 @@ build = [
     "wheel",
 ]
 test = [
-    "bandit>=3.3",
-    "black>=1.8",
+    "bandit>=1.8",
+    "black>=25.0",
     "pytest>=8.4",
     "pytest-cov",
     "isort>=6.0",
-    "pylint>=25.0",
+    "pylint>=3.3",
     "Sphinx>8.2",
     "sphinx-rtd-theme",
 ]
