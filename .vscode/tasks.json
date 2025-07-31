@@ -222,7 +222,7 @@
             },
             "dependsOrder": "sequence",
             "dependsOn": [
-                //"Clean",
+                "Clean",
                 "Security",
                 "Sort Imports",
                 "Format",
