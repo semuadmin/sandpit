@@ -56,7 +56,7 @@ test = [
     "pytest-cov",
     "isort>=6.0",
     "pylint>=3.3",
-    "Sphinx>=8.2",
+    "Sphinx>=7.4",
     "sphinx-rtd-theme",
 ]
 deploy = [{ include-group = "build" }, { include-group = "test" }]
