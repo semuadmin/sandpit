@@ -55,7 +55,7 @@ def main():
 
     args = ap.parse_args()
     c = Calculate()
-    print(c.calc(args.function, float(args.arg1), float(args.arg2)))
+    print(c.calc(args.function, args.arg1, args.arg2))
 
 
 if __name__ == "__main__":
