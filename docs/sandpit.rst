@@ -4,10 +4,18 @@ sandpit package
 Submodules
 ----------
 
-sandpit.main module
--------------------
+sandpit.calculate module
+------------------------
 
-.. automodule:: sandpit.main
+.. automodule:: sandpit.calculate
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+sandpit.calculate\_cli module
+-----------------------------
+
+.. automodule:: sandpit.calculate_cli
    :members:
    :show-inheritance:
    :undoc-members:

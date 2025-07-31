@@ -5,15 +5,16 @@ sandpit is an internal development and testing repo not intended for public cons
 ## Coding conventions
 
   * This is open source software. We endeavour to make the code as transparent as possible.
-  * We use Visual Studio Code for development and testing, but you are at liberty to use your preferred IDE.
-  * We document the code in accordance with [Sphinx](https://www.sphinx-doc.org/en/master/) docstring conventions.
-  * We use [pylint](https://pypi.org/project/pylint/) (>=2.6.0) for code analysis.
-  * We use [bandit](https://pypi.org/project/bandit/) (>=1.7) for security vulnerability analysis.
-  * We use [black](https://pypi.org/project/black/) (>= 20.8) for code formatting and ask that you do the same.
+  * We use and recommend Visual Studio Code for development and testing. The VSCode workflow
+  provided is intended to work on MacOS, Linux and Windows (with PowerShell>=5.1).
+  * We document the code in accordance with [Sphinx](https://www.sphinx-doc.org/en/master/) (>=8.2) docstring conventions.
+  * We use [pylint](https://pypi.org/project/pylint/) (>=3.3) for code analysis.
+  * We use [bandit](https://pypi.org/project/bandit/) (>=1.8) for security vulnerability analysis.
+  * We use [black](https://pypi.org/project/black/) (>=25.0) for code formatting and ask that you do the same.
 
 ## Testing
 
-We use python's native pytest framework for local unit testing, complemented by the GitHub Actions automated build and testing workflow.
+We use Python's pytest (>=8.4) framework for local unit testing, complemented by the GitHub Actions automated build and testing workflow.
 
 Please write pytest examples for new code you create and add them to the /tests folder following the naming convention test_*.py.
 
