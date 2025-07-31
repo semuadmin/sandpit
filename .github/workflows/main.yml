@@ -26,10 +26,8 @@ jobs:
         run: pylint -E src
       - name: Scan security vulnerabilities with bandit
         run: bandit -c pyproject.toml -r -lll .
-      - name: Run unit tests
-        run: coverage run -m unittest
-      - name: Generate coverage report
-        run: coverage html
+      - name: Generate test coverage report
+        run: pytest
       - name: "Upload coverage to Codecov"
         uses: codecov/codecov-action@v4
         with:

@@ -1,11 +1,14 @@
 """
-Created on 19 Dec 2020
+__init__.py
 
-@author: semuadmin
+Created on 24 Jul 2022
+
+:author: semuadmin
+:copyright: SEMU Consulting © 2022
+:license: BSD 3-Clause
 """
 
-# pylint: disable=invalid-name
+from sandpit._version import __version__
+from sandpit.calculate import *
 
-from ._version import __version__
-
-version = __version__
+version = __version__  # pylint: disable=invalid-name

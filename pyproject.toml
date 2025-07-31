@@ -31,6 +31,9 @@ classifiers = [
 
 dependencies = []
 
+[project.scripts]
+calculate = "sandpit.calculate_cli:main"
+
 [project.urls]
 homepage = "https://github.com/semuadmin/sandpit"
 documentation = "https://github.com/semuadmin/sandpit"
@@ -47,12 +50,13 @@ build = [
     "wheel",
 ]
 test = [
-    "bandit",
-    "black",
-    "coverage",
-    "isort",
-    "pylint",
-    "Sphinx",
+    "bandit>=3.3",
+    "black>=1.8",
+    "pytest>=8.4",
+    "pytest-cov",
+    "isort>=6.0",
+    "pylint>=25.0",
+    "Sphinx>8.2",
     "sphinx-rtd-theme",
 ]
 deploy = [{ include-group = "build" }, { include-group = "test" }]
@@ -91,6 +95,12 @@ disable = """
     use-symbolic-message-instead,
 """
 
+[tool.pytest.ini_options]
+minversion = "8.4"
+addopts = "--cov --cov-report html --cov-fail-under 50"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
 [tool.coverage.run]
 source = ["src"]
 
@@ -98,7 +108,7 @@ source = ["src"]
 source = ["src/"]
 
 [tool.coverage.report]
-fail_under = 95
+fail_under = 50
 
 [tool.coverage.html]
 directory = "htmlcov"

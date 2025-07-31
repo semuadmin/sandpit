@@ -4,9 +4,12 @@ Created on 19 Dec 2020
 @author: semuadmin
 """
 
+#pylint: disable=missing-class-docstring, missing-function-docstring
+
+from subprocess import run, PIPE
 import unittest
 
-from src.sandpit.main import bearing, haversine
+from sandpit.calculate import Calculate
 
 
 class StaticTest(unittest.TestCase):
@@ -16,24 +19,28 @@ class StaticTest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testhaversine(self):
-        res = haversine(51.23, -2.41, 34.205, 56.34)
-        self.assertAlmostEqual(res, 5010.722, 3)
-        res = haversine(-12.645, 34.867, 145.1745, -56.27846)
-        self.assertAlmostEqual(res, 10715.371, 3)
-        res = haversine(53.45, -2.14, 53.451, -2.141)
-        self.assertAlmostEqual(res, 0.1296, 3)
+    def testadd(self):
+        c = Calculate()
+        self.assertEqual(c.add(2.5,3.5),6)
 
-    def testbearing(self):
-        res = bearing(51.23, -2.41, 53.205, -2.34)
-        self.assertAlmostEqual(res, 1.216362703824359, 4)
-        res = bearing(51.23145, -2.41, 51.23145, -2.34)
-        self.assertAlmostEqual(res, 89.9727111358776, 4)
-        res = bearing(51.23, -2.41, 34.205, 56.34)
-        self.assertAlmostEqual(res, 88.58134073451902, 4)
-        res = bearing(-12.645, 34.867, -34.1745, 48.27846)
-        self.assertAlmostEqual(res, 152.70835788275326, 4)
+    def testmultiply(self):
+        c = Calculate()
+        self.assertEqual(c.multiply(2.5,3.5),8.75)
 
+    def testcalculate(self):
+        c = Calculate()
+        self.assertEqual(c.calc("add", 2.5,3.5),6)
+        self.assertEqual(c.calc("multiply", 2.5,3.5),8.75)
+
+    def testcalculateerror(self):
+        c = Calculate()
+        with self.assertRaisesRegex(ValueError,"Invalid function"):
+            res = c.calc("divide", 2.5,3.5),0.7142857142857143
+
+    def testcli(self):
+        res = run(['calculate', '--function', 'add', '--arg1', '2.5', '--arg2', '3.5'], stdout=PIPE, check=False)
+        res = res.stdout.decode('utf-8').strip("\r\n")
+        self.assertEqual(res, '6.0')
 
 if __name__ == "__main__":
     # import sys;sys.argv = ['', 'Test.testName']
