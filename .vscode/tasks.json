@@ -117,6 +117,20 @@
             "problemMatcher": []
         },
         {
+            "label": "Test",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pytest"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Build",
             "type": "process",
             "command": "${config:python.defaultInterpreterPath}",
@@ -128,22 +142,17 @@
                 "--sdist",
             ],
             "problemMatcher": [],
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Clean",
+                "Security",
+                "Sort Imports",
+                "Format",
+                "Pylint",
+                "Test",
+            ],
             "group": {
                 "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "Test",
-            "type": "process",
-            "command": "${config:python.defaultInterpreterPath}",
-            "args": [
-                "-m",
-                "pytest"
-            ],
-            "problemMatcher": [],
-            "group": {
-                "kind": "test",
                 "isDefault": true
             }
         },
@@ -206,6 +215,7 @@
                 "-m",
                 "pip",
                 "install",
+                "--upgrade",
                 "--force-reinstall",
                 "*.whl"
             ],
@@ -215,6 +225,7 @@
                     "-m",
                     "pip",
                     "install",
+                    "--upgrade",
                     "--force-reinstall",
                     "--find-links=${workspaceFolder}/dist",
                     "${workspaceFolderBasename}"
@@ -222,12 +233,6 @@
             },
             "dependsOrder": "sequence",
             "dependsOn": [
-                "Clean",
-                "Security",
-                "Sort Imports",
-                "Format",
-                "Pylint",
-                "Test",
                 "Build",
                 "Sphinx HTML"
             ],
@@ -267,6 +272,11 @@
             "options": {
                 "cwd": "dist"
             },
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build",
+                "Sphinx HTML"
+            ],
             "problemMatcher": []
         },
     ]
