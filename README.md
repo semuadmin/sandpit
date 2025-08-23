@@ -22,5 +22,3 @@ build toolchains and other shiz.
 ## <a name="author">Author & License Information</a>
 
 ![GitHub License](https://img.shields.io/github/license/semuadmin/sandpit)
-
-[![Freedom for Ukraine](https://github.com/semuadmin/sandpit/blob/main/images/ukraine200.jpg?raw=true)](https://u24.gov.ua/)

@@ -5,8 +5,8 @@
     // This VSCode development workflow is intended to work on
     // MacOS, Linux and Windows (with Powershell>=5.1).
     //
-    // Use the Install Deploy Dependencies to System task to install
-    // the necessary build and test packages into the system environment.
+    // Use the Install Deploy Dependencies tasks to install the necessary
+    // build and test packages into the system environment.
     //
     // Use the Create Venv task to create a virtual environment in the
     // designated directory. Select this environment using Select
@@ -23,12 +23,12 @@
                 "-m",
                 "venv",
                 "${config:venv}",
-                "--system-site-packages"
+                //"--system-site-packages"
             ],
             "problemMatcher": []
         },
         {
-            "label": "Install Deploy Dependencies to System", // or User if System not writeable
+            "label": "Install Deploy Dependencies",
             "type": "process",
             "command": "${config:python.defaultInterpreterPath}",
             "args": [
@@ -208,7 +208,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Install to System", // or User if System not writeable
+            "label": "Install Locally",
             "type": "process",
             "command": "${config:python.defaultInterpreterPath}",
             "args": [
@@ -217,58 +217,11 @@
                 "install",
                 "--upgrade",
                 "--force-reinstall",
-                "*.whl"
+                "--find-links=${workspaceFolder}/dist",
+                "${workspaceFolderBasename}",
+                // "--target",
+                // "${config:venv}/Lib/site-packages"
             ],
-            "windows": {
-                "command": "${config:python.defaultInterpreterPath}",
-                "args": [
-                    "-m",
-                    "pip",
-                    "install",
-                    "--upgrade",
-                    "--force-reinstall",
-                    "--find-links=${workspaceFolder}/dist",
-                    "${workspaceFolderBasename}"
-                ]
-            },
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "Build",
-                "Sphinx HTML"
-            ],
-            "options": {
-                "cwd": "dist"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Install to Venv",
-            "type": "process",
-            "command": "${config:python.defaultInterpreterPath}",
-            "args": [
-                "-m",
-                "pip",
-                "install",
-                "--upgrade",
-                "--force-reinstall",
-                "*.whl",
-                "--target",
-                "${env:UserProfile}/semuvenv/Lib/site-packages"
-            ],
-            "windows": {
-                "command": "${config:python.defaultInterpreterPath}",
-                "args": [
-                    "-m",
-                    "pip",
-                    "install",
-                    "--upgrade",
-                    "--force-reinstall",
-                    "--find-links=${workspaceFolder}/dist",
-                    "${workspaceFolderBasename}",
-                    "--target",
-                    "${config:venv}/Lib/site-packages"
-                ]
-            },
             "options": {
                 "cwd": "dist"
             },
@@ -278,6 +231,6 @@
                 "Sphinx HTML"
             ],
             "problemMatcher": []
-        },
+        }
     ]
 }
