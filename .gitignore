@@ -4,7 +4,6 @@
 *.code-workspace
 /htmlcov
 /build
-/dist
 /docs/_build
 /references
 /src/sandpit.egg*
