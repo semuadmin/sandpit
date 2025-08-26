@@ -1,7 +1,8 @@
 name: deploy
 
 on:
-  workflow_dispatch: # manual trigger
+  release: # when new release created
+    types: [published]
 
 permissions:
   contents: read
@@ -22,7 +23,7 @@ jobs:
           python -m pip install build
           python -m build
 
-      - name: Upload distributions
+      - name: Upload distributions # upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: release-dists
@@ -38,7 +39,7 @@ jobs:
       id-token: write
     steps:
 
-      - name: Download all the dists # Download the build artifacts that were saved earlier
+      - name: Download all the dists # download build artifacts saved in previous job
         uses: actions/download-artifact@v4
         with:
           name: release-dists
@@ -48,22 +49,3 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-
-  # github-release:
-  #   needs:
-  #   - testpypi-publish
-  #   name: Create GitHub Release with source code
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     contents: write  # IMPORTANT: mandatory for making GitHub Releases
-  #   steps:
-  #
-  #     - name: Create release
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #         tag: ${{ github.ref_name }}
-  #       run: |
-  #         gh release create "$tag" \
-  #             --repo="$GITHUB_REPOSITORY" \
-  #             --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
-  #             --generate-notes

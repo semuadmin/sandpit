@@ -5,6 +5,7 @@
 /htmlcov
 /dist
 /build
+/examples
 /docs/_build
 /references
 /src/semuadmin_sandpit.egg*
