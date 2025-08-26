@@ -3,6 +3,7 @@
 .coverage
 *.code-workspace
 /htmlcov
+/dist
 /build
 /docs/_build
 /references
