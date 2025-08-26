@@ -1,2 +1,0 @@
-global-exclude __pycache__
-global-exclude *.pyc
