@@ -7,8 +7,8 @@
 /build
 /docs/_build
 /references
-/src/sandpit.egg*
-/src/sandpit/__pycache__
+/src/semuadmin_sandpit.egg*
+/src/semuadmin_sandpit/__pycache__
 /.dbeaver
 *.pyc
 /.pytest_cache/
