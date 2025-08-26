@@ -1,0 +1,23 @@
+name: sandpit-publish
+
+on:
+    workflow_dispatch:
+        
+jobs:
+  pypi-publish:
+    name: upload release to TestPyPI
+    runs-on: ubuntu-latest
+    # Specifying a GitHub environment is optional, but strongly encouraged
+    environment: test.pypi
+    permissions:
+      # IMPORTANT: this permission is mandatory for Trusted Publishing
+      id-token: write
+    steps:
+      # retrieve your distributions here
+
+      - name: Publish package distributions to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+            repository-url: https://test.pypi.org/legacy/
+
+  
