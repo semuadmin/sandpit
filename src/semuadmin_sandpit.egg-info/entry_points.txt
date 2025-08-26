@@ -1,2 +1,2 @@
 [console_scripts]
-calculate = sandpit.calculate_cli:main
+calculate = semuadmin_sandpit.calculate_cli:main

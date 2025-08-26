@@ -34,7 +34,7 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-calculate = "sandpit.calculate_cli:main"
+calculate = "semuadmin_sandpit.calculate_cli:main"
 
 [project.urls]
 homepage = "https://github.com/semuadmin/semuadmin_sandpit"

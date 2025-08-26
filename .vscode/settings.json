@@ -14,4 +14,5 @@
     "chat.notifyWindowOnConfirmation": false,
     "telemetry.feedback.enabled": false,
     "python.analysis.addHoverSummaries": false,
+    "python.testing.unittestEnabled": false,
 }
