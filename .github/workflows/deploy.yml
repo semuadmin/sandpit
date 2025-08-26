@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # manual trigger
 
 permissions:
   contents: read
@@ -10,6 +10,7 @@ jobs:
   release-build:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v4
       - name: Set up Python 
         uses: actions/setup-python@v5
@@ -32,21 +33,21 @@ jobs:
       - release-build
     name: Upload release to Test PyPI
     runs-on: ubuntu-latest
-    # Specifying a GitHub environment is optional, but strongly encouraged
     environment: testpypi
     permissions:
-      # IMPORTANT: this permission is mandatory for Trusted Publishing
       id-token: write
     steps:
-    - name: Download all the dists # Download the build artifacts that were saved earlier
-      uses: actions/download-artifact@v4
-      with:
-        name: release-dists
-        path: dist/
-    - name: Publish package distributions to TestPyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        repository-url: https://test.pypi.org/legacy/
+
+      - name: Download all the dists # Download the build artifacts that were saved earlier
+        uses: actions/download-artifact@v4
+        with:
+          name: release-dists
+          path: dist/
+
+      - name: Publish package distributions to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
 
   # github-release:
   #   needs:
@@ -56,6 +57,7 @@ jobs:
   #   permissions:
   #     contents: write  # IMPORTANT: mandatory for making GitHub Releases
   #   steps:
+  #
   #     - name: Create release
   #       env:
   #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
