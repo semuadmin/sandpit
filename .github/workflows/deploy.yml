@@ -48,20 +48,20 @@ jobs:
       with:
         repository-url: https://test.pypi.org/legacy/
 
-  github-release:
-    needs:
-    - testpypi-publish
-    name: Create GitHub Release with source code
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write  # IMPORTANT: mandatory for making GitHub Releases
-    steps:
-      - name: Create release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-        run: |
-          gh release create "$tag" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
-              --generate-notes
+  # github-release:
+  #   needs:
+  #   - testpypi-publish
+  #   name: Create GitHub Release with source code
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write  # IMPORTANT: mandatory for making GitHub Releases
+  #   steps:
+  #     - name: Create release
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         tag: ${{ github.ref_name }}
+  #       run: |
+  #         gh release create "$tag" \
+  #             --repo="$GITHUB_REPOSITORY" \
+  #             --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+  #             --generate-notes
