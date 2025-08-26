@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/semuadmin_sandpit/__init__.py
+src/semuadmin_sandpit/_version.py
+src/semuadmin_sandpit/calculate.py
+src/semuadmin_sandpit/calculate_cli.py
+src/semuadmin_sandpit.egg-info/PKG-INFO
+src/semuadmin_sandpit.egg-info/SOURCES.txt
+src/semuadmin_sandpit.egg-info/dependency_links.txt
+src/semuadmin_sandpit.egg-info/entry_points.txt
+src/semuadmin_sandpit.egg-info/top_level.txt
+tests/test_methods.py

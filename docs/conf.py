@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath("../src"))
 
 print(f"DEBUG sys path {sys.path}")
 
-from sandpit import version as VERSION
+from semuadmin_sandpit import version as VERSION
 
 # -- Project information -----------------------------------------------------
 project = "sandpit"

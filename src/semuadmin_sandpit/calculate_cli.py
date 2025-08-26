@@ -16,8 +16,8 @@ Created on 24 Jul 2022
 
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
-from sandpit._version import __version__ as VERSION
-from sandpit.calculate import Calculate
+from semuadmin_sandpit._version import __version__ as VERSION
+from semuadmin_sandpit.calculate import Calculate
 
 EPILOG = (
     "© 2022 SEMU Consulting BSD 3-Clause license"

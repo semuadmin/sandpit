@@ -1,7 +1,7 @@
-sandpit
-=======
+semuadmin_sandpit
+=================
 
 .. toctree::
    :maxdepth: 4
 
-   sandpit
+   semuadmin_sandpit

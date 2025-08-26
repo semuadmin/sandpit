@@ -9,7 +9,7 @@ Created on 19 Dec 2020
 import unittest
 from subprocess import PIPE, run
 
-from sandpit.calculate import Calculate
+from semuadmin_sandpit.calculate import Calculate
 
 
 class StaticTest(unittest.TestCase):

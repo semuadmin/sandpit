@@ -3,7 +3,7 @@ requires = ["setuptools>=75.0.0", "wheel"]         # >=64 for PEP660 support
 build-backend = "setuptools.build_meta:__legacy__"
 
 [project]
-name = "sandpit"
+name = "semuadmin_sandpit"
 dynamic = ["version"]
 authors = [{ name = "Steve Smith", email = "semuadmin@semuconsulting.com" }]
 maintainers = [{ name = "Steve Smith", email = "semuadmin@semuconsulting.com" }]
@@ -37,10 +37,10 @@ dependencies = []
 calculate = "sandpit.calculate_cli:main"
 
 [project.urls]
-homepage = "https://github.com/semuadmin/sandpit"
-documentation = "https://github.com/semuadmin/sandpit"
-repository = "https://github.com/semuadmin/sandpit"
-changelog = "https://github.com/semuadmin/sandpit/blob/master/RELEASE_NOTES.md"
+homepage = "https://github.com/semuadmin/semuadmin_sandpit"
+documentation = "https://github.com/semuadmin/semuadmin_sandpit"
+repository = "https://github.com/semuadmin/semuadmin_sandpit"
+changelog = "https://github.com/semuadmin/semuadmin_sandpit/blob/master/RELEASE_NOTES.md"
 
 [dependency-groups]
 build = [
@@ -64,7 +64,7 @@ test = [
 deploy = [{ include-group = "build" }, { include-group = "test" }]
 
 [tool.setuptools.dynamic]
-version = { attr = "sandpit._version.__version__" }
+version = { attr = "semuadmin_sandpit._version.__version__" }
 
 [tool.black]
 target-version = ['py39']
